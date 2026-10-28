@@ -1,15 +1,15 @@
 from datetime import date
 #exercicio 36
 print('Exercicio 36 - Empréstimo bancário')
-valor_casa = int(input('Digite o valor da casa: '))
-salario = int(input('Digite seu salário mensal: '))
+valor_casa = int(input('Digite o valor da casa: R$'))
+salario = int(input('Digite seu salário mensal: R$'))
 prazo = int(input('Em quantos anos você pretende pagar esse empréstimo? '))
 
 prestacao_mensal = valor_casa / (prazo * 12)
 limite_mensal = salario * 0.3
 
 if prestacao_mensal > limite_mensal:
-    print('A prestação é excede o limite de 30% do seu sálario')
+    print('A prestação excede o limite de 30% do seu sálario')
 else:
     print('Empréstimo aprovado, valor da prestação: {:.2f}'.format(prestacao_mensal))
 print('+-*' * 20)
