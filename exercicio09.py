@@ -1,6 +1,5 @@
 #from datetime import date
 import random
-'''
 #exercicio 41
 print('Exercicio 41 - Categoria dos atletas por idade')
 ano_atual = date.today().year
@@ -9,11 +8,11 @@ idade = ano_atual - ano_nascimento
 
 if idade <= 9:
     print('O atleta tem {} anos, e está na categoria MIRIM'.format(idade))
-elif idade > 9 and idade <= 14:
+elif idade <= 14:
     print('O atleta tem {} anos, e está na categoria INFANTIL'.format(idade))
-elif idade > 10 and idade <= 19:
+elif idade <= 19:
     print('O atleta tem {} anos, e está na categoria JUNIOR'.format(idade))
-elif idade == 20: 
+elif idade <= 25: 
     print('O atleta tem {} anos, e está na categoria SENIOR'.format(idade))
 else:
     print('O atleta tem {} anos, e está na categoria MASTER'.format(idade))
@@ -81,7 +80,7 @@ elif condicao == 4:
 else:
     print('O numero digitado não corresponde a nenhuma opção de pagamento')
 print('-+*' *20)
-'''
+
 #exercicio 43
 print('Exercicio 43 - Jokenpô')
 resposta = input('Vamos brincar de Jokenpô? É sua vez digite sua opção: \n "PEDRA" "PAPEL" ou "TESOURA" : ').upper()
