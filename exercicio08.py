@@ -70,6 +70,7 @@ nota2 = float(input('Digite a nota do segundo bimeste: '))
 nota3 = float(input('Digite a nota do terceiro bimestre: '))
 nota4 = float(input('Digite a nota do quarto bimestre: '))
 media = (nota1 + nota2 + nota3 + nota4) / 4
+print('1 °Bimestre: {}\n2° Bimestre: {}\n3° Bimestre: {}\n4° Bimestre: {}'.format(nota1, nota2, nota3, nota4))
 if media < 5:
     print('Sua média final foi {}, você está REPROVADO'.format(media))
 elif media >=5 and media < 7:
