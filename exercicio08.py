@@ -13,6 +13,7 @@ if prestacao_mensal > limite_mensal:
 else:
     print('Empréstimo aprovado, valor da prestação: {:.2f}'.format(prestacao_mensal))
 print('+-*' * 20)
+
 #exercicio 37
 print('Exercicio 37 - Base de conversão')
 numero = int(input('Que número você quer converter? '))
@@ -52,11 +53,14 @@ ano_nascimento = int(input('Qual o seu ano de nascimento? '))
 idade = ano_atual - ano_nascimento
 
 if idade < 18:
+    print('Quem nasceu em {} tem {} anos em {}'.format(ano_nascimento, idade, ano_atual))
     print('Ainda não é tempo de se alistar, faltam {} anos'.format(18 - idade))
 elif idade == 18:
-    print('Hora de se alistar no exercito você tem 18 anos')
+    print('Quem nasceu em {} tem {} anos em {}'.format(ano_nascimento, idade, ano_atual))
+    print('Hora de se alistar no exercito IMEDIATAMENTE')
 else:
-    print('Passou seu prazo de alistamento, faz {} anos'.format(idade - 18))
+    print('Quem nasceu em {} tem {} anos em {}'.format(ano_nascimento, idade, ano_atual))
+    print('Você tinha que ter se alistado há {} anos'.format(idade - 18))
 print('+-*' * 20)
 
 #exercicio 40
