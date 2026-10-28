@@ -13,17 +13,20 @@ if prestacao_mensal > limite_mensal:
 else:
     print('Empréstimo aprovado, valor da prestação: {:.2f}'.format(prestacao_mensal))
 print('+-*' * 20)
-
 #exercicio 37
 print('Exercicio 37 - Base de conversão')
 numero = int(input('Que número você quer converter? '))
-base = int(input('Quer converter para qual base?\n Digite 1 para converter para binário\n Digite 2 para converter para octal\n Digite 3 para converter para hexadecimal\n'))
+print('Escolha uma das bases de converção: \n Digite [1] para converter para binário\n Digite [2] para converter para octal\n Digite [3] para converter para hexadecimal ')
+base = int(input('Quer converter para qual base? '))
 
 if base == 1:
+    print('{} convertido para BINÁRIO é igual a: '.format(numero))
     print(bin(numero)[2:])
 elif base == 2:
+    print('{} convertido para OCTAL é igual a: '.format(numero))
     print(oct(numero)[2:])
 elif base == 3:
+    print('{} convertido para HEXADECIMAL é igual a: '.format(numero))
     print(hex(numero)[2:])
 else:
     print('Você escolheu uma base que não existe no programa')
