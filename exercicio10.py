@@ -24,3 +24,13 @@ for numero in range(0, 500, 3):
         soma += numero
 print(soma)
 print('*/*' * 20)
+
+#exercicio 49
+print('Exercicio 49 - Tabuada')
+numero = int(input('Digite um número para gerar a tabuada dele: '))
+print('A tabuada de {} é:'.format(numero))
+
+for n in range(0, 11):
+    print('{} x {} = {}'.format(numero, n, numero * n))
+print('*/*' * 20)
+
