@@ -55,28 +55,36 @@ else:
 print('-+*' *20)
 
 #exercicio 44
-print('Exercicio 44 - Preço do produto')
-preco = float(input('Digite o preço do produto: '))
-condicao = int(input('Digite o número da forma de pagamento: \n Digite 1 para pagamento à vista (dinheiro ou cheque)\n Digite 2 para pagamento à vista no cartão\n Digite 3 para pagar em até 2x no cartão\n Digite 4 para pagar em 3 ou mais vezes no cartão\n'))
+print('Exercicio 44 - Preço da compra')
+print('{:=^40}'.format(' JANAINA STORE '))
+preco = float(input('Digite o valor total da compra: '))
+condicao = int(input('''Digite o número da forma de pagamento:
+Digite [1] para pagamento à vista (dinheiro ou cheque)
+Digite [2] para pagamento à vista no cartão
+Digite [3] para pagar em até 2x no cartão
+Digite [4] para pagar em 3 ou mais vezes no cartão\n'''))
 
 if condicao == 1:
     desconto = preco * 0.10
     preco_final = preco - desconto
     print('Pagamento à vista no dinheiro ou cheque tem 10% de desconto')
-    print('O produto de R${:.2f}, ganhou R${:.2f} de desconto e ficou por apenas R${:.2f}'.format(preco, desconto, preco_final))
+    print('A compra de R${:.2f}, ganhou R${:.2f} de desconto e ficou por apenas R${:.2f}'.format(preco, desconto, preco_final))
 elif condicao == 2:
     desconto = preco * 0.05
     preco_final = preco - desconto
     print('Pagamento à vista no cartão tem 5% de desconto')
-    print('O produto de R${:.2f}, ganhou R${:.2f} de desconto e ficou por apenas R${:.2f}'.format(preco, desconto, preco_final))
+    print('A compra de R${:.2f}, ganhou R${:.2f} de desconto e ficou por apenas R${:.2f}'.format(preco, desconto, preco_final))
 elif condicao == 3:
+    parcela = preco / 2
     print('Pagamento em até 2x no cartão NÃO TEM ACRESCIMO')
-    print('O produto ficou por apenas R${:.2f}'.format(preco))
+    print('A compra ficou por apenas R${:.2f} 2x de R${:.2f}'.format(preco,parcela))
 elif condicao == 4:
     juros = preco * 0.20
     preco_final = preco + juros
-    print('Pagamento no cartão parcelado em mais de 3x tem acrescimo de 20% de juros ')
-    print('O produto de R${:.2f}, parcelado em 3 ou mais vezes tem R${:.2f} de juros e ficou por apenas R${:.2f}'.format(preco, juros, preco_final))
+    print('Pagamento no cartão parcelado 3 ou mais vezes tem acrescimo de 20% de juros ')
+    total_parcela = int(input('Você quer parcelar em quantas vezes? '))
+    parcela = preco_final / total_parcela
+    print('Sua compra de R${:.2f}, foi parcelado no cartão em {}x de {:.2f}'.format(preco, total_parcela, parcela))
 else:
     print('O numero digitado não corresponde a nenhuma opção de pagamento')
 print('-+*' *20)
