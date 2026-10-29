@@ -1,4 +1,4 @@
-#from datetime import date
+from datetime import date
 import random
 #exercicio 41
 print('Exercicio 41 - Categoria dos atletas por idade')
@@ -26,12 +26,12 @@ comp2 = float(input('Digite o comprimento do segundo lado do triângulo: '))
 comp3 = float(input('Digite o comprimento do terceiro lado do triângulo: '))
 if comp1 < comp2 + comp3 and comp2 < comp1 + comp3 and comp3 < comp1 + comp2:
     print('Os lados formam um triângulo!')
-    if comp1 == comp2 and comp2 == comp3:
+    if comp1 == comp2 == comp3:
         print('Esse é um triangulo Equilátero')
-    elif comp1 == comp2 and comp2 != comp3:
-        print('Esse é um triângulo Isósceles')
-    else:
+    elif comp1 != comp3 != comp2:
         print('Esse é um triângulo Escaleno')
+    else:
+        print('Esse é um triângulo Isósceles')
 else:
     print('Os lados não formam um triângulo!')
 print('-+*' *20)
