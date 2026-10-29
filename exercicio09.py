@@ -28,7 +28,7 @@ if comp1 < comp2 + comp3 and comp2 < comp1 + comp3 and comp3 < comp1 + comp2:
     print('Os lados formam um triângulo!')
     if comp1 == comp2 == comp3:
         print('Esse é um triangulo Equilátero')
-    elif comp1 != comp3 != comp2:
+    elif comp1 != comp2 != comp3 != comp1:
         print('Esse é um triângulo Escaleno')
     else:
         print('Esse é um triângulo Isósceles')
@@ -40,18 +40,18 @@ print('-+*' *20)
 print('Exercício 43 - IMC')
 peso = float(input('Digite seu peso: '))
 altura = float(input('Digite sua altura: '))
-imc = peso / (altura * altura)
+imc = peso / (altura ** 2)
 
 if imc < 18.5:
-    print('Seu IMC é: {:.2f}, você está abaixo do peso ideal para sua altura'.format(imc))
-elif imc >= 18.5 and imc < 25:
-    print('Seu IMC é: {:.2f}, você está na faixa de peso ideal para sua altura'.format(imc))
-elif imc >= 25 and imc < 30:
-    print('Seu IMC é: {:.2f}, você está com sobrepeso'.format(imc))
-elif imc >= 30 and imc < 40:
-    print('Seu IMC é: {:.2f}, você está com OBESIDADE, isto é acima do peso ideal para sua altura'.format(imc))
+    print('Seu IMC é: {:.1f}, você está abaixo do peso ideal para sua altura'.format(imc))
+elif 18.5 <= imc < 25:
+    print('Seu IMC é: {:.1f}, você está na faixa de peso ideal para sua altura'.format(imc))
+elif 25 <= imc < 30:
+    print('Seu IMC é: {:.1f}, você está com sobrepeso'.format(imc))
+elif 30 <= imc < 40:
+    print('Seu IMC é: {:.1f}, você está com OBESIDADE, isto é acima do peso ideal para sua altura'.format(imc))
 else:
-    print('Seu IMC é: {:.2f}, você está com OBESIDADE MORBIDA, isto é MUITO acima do peso ideal para sua altura'.format(imc))
+    print('Seu IMC é: {:.1f}, você está com OBESIDADE MORBIDA, isto é MUITO acima do peso ideal para sua altura'.format(imc))
 print('-+*' *20)
 
 #exercicio 44
