@@ -89,20 +89,23 @@ else:
     print('O numero digitado não corresponde a nenhuma opção de pagamento')
 print('-+*' *20)
 
-#exercicio 43
-print('Exercicio 43 - Jokenpô')
-resposta = input('Vamos brincar de Jokenpô? É sua vez digite sua opção: \n "PEDRA" "PAPEL" ou "TESOURA" : ').upper()
+#exercicio 45
+print('Exercicio 45 - Jokenpô')
+resposta_jogador = input('Vamos brincar de Jokenpô? É sua vez digite sua opção: \n "PEDRA" "PAPEL" ou "TESOURA" : ').upper()
 computador = random.randint(1,3)
-opcao = ''
 if computador == 1:
-    opcao = 'PEDRA'
+    resposta_computador = 'PEDRA'
 if computador == 2:
-    opcao = 'PAPEL'
+    resposta_computador = 'PAPEL'
 if computador == 3:
-    opcao = 'TESOURA'
-if opcao == resposta:
-    print('Deu empate nós escolhemos {}'.format(opcao))
-elif computador == 1 and resposta == 'PAPEL' or computador == 2 and resposta == 'TESOURA' or computador == 3 and resposta == 'PEDRA':
-    print('Você ganhou, escolheu {} e eu tinha escolhido {}'.format(resposta, opcao))
+    resposta_computador = 'TESOURA'
+print('=='*20)
+print('''Computador jogou {}
+Jogador jogou {}'''.format(resposta_computador, resposta_jogador))
+print('=='*20)
+if resposta_computador == resposta_jogador:
+    print('Deu empate nós escolhemos {}'.format(resposta_computador))
+elif computador == 1 and resposta_jogador == 'PAPEL' or computador == 2 and resposta_jogador == 'TESOURA' or computador == 3 and resposta_jogador == 'PEDRA':
+    print('Você ganhou, escolheu {} e eu tinha escolhido {}'.format(resposta_jogador, resposta_computador))
 else:
-    print('Eu ganhei, eu escolhi {} e você escolheu {}'.format(opcao, resposta))
+    print('Eu ganhei, eu escolhi {} e você escolheu {}'.format(resposta_computador, resposta_jogador))
