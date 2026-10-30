@@ -1,13 +1,13 @@
-from datetime import date
-'''#exercicio 51
+'''from datetime import date
+#exercicio 51
 print('Exercício 51 - Progressão Aritimetica')
 termo1 = int(input('Digite o primeiro termo da P.A.: '))
 razao = int(input('Digite a razão da P.A: '))
 
 for n in range(termo1, 10, razao):
     print(n)
-
 print('*-*-' * 20)
+
 #exercicio 52
 print('Exercicio 52 - Saber se o número é primo')
 numero = int(input('Digite um número para saber se ele é primo '))
@@ -29,7 +29,6 @@ if primo == True:
     print('O número {} é primo'.format(numero))
 else:
     print('O número {} não é primo'.format(numero))
-
 print('*-*-' * 20)
 
 #exercicio 53
@@ -42,7 +41,7 @@ if frase_formatada == frase_contrario:
 else:
     print('Essa frase não é um palídromo')
 print('*-*-' * 20)
-'''
+
 #exercicio 54
 print('Execício 54 - Saber quantas pessoas atingiram a maioridade')
 ano_atual = date.today().year
@@ -56,3 +55,20 @@ for a in ano:
 print('Esses são os anos de nascimento dos participantes: {}'.format(ano))
 print('{} não atingiram a maioridade ainda'.format(total))
 print('{} são maiores de idade'.format(len(ano) - total))
+print('*-*-' * 20)
+
+'''
+#exercicio 55
+print('Exercício 55 - Maior e menor peso')
+pesos = []
+for i in range(5):
+    pesos.append(float(input('Digite o peso do {}° participante: '.format(i+1))))
+maior = pesos[0]
+menor = pesos[0]
+for peso in pesos:
+    if peso > maior:
+        maior = peso
+    if peso < menor:
+        menor = peso
+print('O maior peso entre os participante é: {}'.format(maior))
+print('O menor peso entre os participante é: {}'.format(menor))
