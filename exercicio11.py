@@ -1,4 +1,4 @@
-'''from datetime import date
+from datetime import date
 #exercicio 51
 print('Exercício 51 - Progressão Aritimetica')
 termo1 = int(input('Digite o primeiro termo da P.A.: '))
@@ -57,7 +57,6 @@ print('{} não atingiram a maioridade ainda'.format(total))
 print('{} são maiores de idade'.format(len(ano) - total))
 print('*-*-' * 20)
 
-'''
 #exercicio 55
 print('Exercício 55 - Maior e menor peso')
 pesos = []
