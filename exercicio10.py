@@ -20,10 +20,12 @@ print('*/*' * 20)
 #exercicio 48
 print('Exercicio 48 - Soma dos números impares, multiplos de 3, entre 1 e 500')
 soma = 0
-for numero in range(0, 500, 3):
+count = 0
+for numero in range(0, 501, 3):
     if numero % 2 != 0:
         soma += numero
-print(soma)
+        count += 1
+print('A soma de todos os {} valores é {}'.format(count, soma))
 print('*/*' * 20)
 
 #exercicio 49
