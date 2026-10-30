@@ -1,4 +1,5 @@
-#exercicio 51
+from datetime import date
+'''#exercicio 51
 print('Exercício 51 - Progressão Aritimetica')
 termo1 = int(input('Digite o primeiro termo da P.A.: '))
 razao = int(input('Digite a razão da P.A: '))
@@ -40,4 +41,18 @@ if frase_formatada == frase_contrario:
     print('Essa frase é um palídromo')
 else:
     print('Essa frase não é um palídromo')
-    print('*-*-' * 20)
+print('*-*-' * 20)
+'''
+#exercicio 54
+print('Execício 54 - Saber quantas pessoas atingiram a maioridade')
+ano_atual = date.today().year
+ano = []
+total = 0
+for n in range(0,7):
+    ano.append(int(input('Digite o ano de nascimeto do {}° participante '.format(n+1))))
+for a in ano:
+    if (ano_atual - a) < 18:
+        total += 1
+print('Esses são os anos de nascimento dos participantes: {}'.format(ano))
+print('{} não atingiram a maioridade ainda'.format(total))
+print('{} são maiores de idade'.format(len(ano) - total))
