@@ -3,9 +3,10 @@ from datetime import date
 print('Exercício 51 - Progressão Aritimetica')
 termo1 = int(input('Digite o primeiro termo da P.A.: '))
 razao = int(input('Digite a razão da P.A: '))
-
-for n in range(termo1, 10, razao):
-    print(n)
+decimo = termo1 + (10 - 1) * razao
+for n in range(termo1, decimo + razao, razao):
+    print('{}'.format(n), end=' -> ')
+print('\n')
 print('*-*-' * 20)
 
 #exercicio 52
