@@ -30,3 +30,14 @@ else:
     print('O número {} não é primo'.format(numero))
 
 print('*-*-' * 20)
+
+#exercicio 53
+print('Exercicio 53 - Verificar se a frase é um palídromo')
+frase = str(input('Escreva uma frase: '))
+frase_formatada = frase.upper().replace(' ', '')
+frase_contrario = frase_formatada[::-1]
+if frase_formatada == frase_contrario:
+    print('Essa frase é um palídromo')
+else:
+    print('Essa frase não é um palídromo')
+    print('*-*-' * 20)
