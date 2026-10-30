@@ -40,8 +40,10 @@ print('*/*' * 20)
 #exercicio 50
 print('Exercicio 50 - Ler números e retornar soma apenas dos pares')
 soma = 0
+count = 0
 for n in range(0,6):
     n = int(input('Digite um número para a soma '))
     if n % 2 == 0:
         soma = soma + n
-print('A soma dos números pares que você digitou da: {} '.format(soma))
+        count += 1
+print('Você informou {} numeros PARES e a soma foi: {} '.format(count,soma))
