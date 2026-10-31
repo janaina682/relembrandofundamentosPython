@@ -32,6 +32,22 @@ else:
     print('O número {} não é primo'.format(numero))
 print('*-*-' * 20)
 
+#exercicio 52 - Correção (feito de outra forma)
+num = int(input('Digite um número: '))
+tot = 0
+for c in range(1, num + 1):
+    if num % c == 0:
+        print('\033[33m', end='')
+        tot += 1
+    else:
+        print('\033[31m', end='')
+    print('{} '.format(c), end='')
+print('\n\033[mO número {} foi divisível {} vezes'.format(num, tot))
+if tot == 2:
+    print('É por isso que ele é PRIMO!')
+else:
+    print('É por isso que ele NÃO É PRIMO!')
+    
 #exercicio 53
 print('Exercicio 53 - Verificar se a frase é um palídromo')
 frase = str(input('Escreva uma frase: '))
