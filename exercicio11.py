@@ -88,5 +88,5 @@ for peso in pesos:
         maior = peso
     if peso < menor:
         menor = peso
-print('O maior peso entre os participante é: {}'.format(maior))
-print('O menor peso entre os participante é: {}'.format(menor))
+print('O maior peso entre os participante é: {}kg'.format(maior))
+print('O menor peso entre os participante é: {}kg'.format(menor))
