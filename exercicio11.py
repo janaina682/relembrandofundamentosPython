@@ -49,14 +49,16 @@ else:
     print('É por isso que ele NÃO É PRIMO!')
     
 #exercicio 53
-print('Exercicio 53 - Verificar se a frase é um palídromo')
+print('Exercicio 53 - Verificar se a frase é um palíndromo')
 frase = str(input('Escreva uma frase: '))
 frase_formatada = frase.upper().replace(' ', '')
 frase_contrario = frase_formatada[::-1]
+print('A frase: {} escrita ao contrário é: {}'.format(frase_formatada, frase_contrario))
+
 if frase_formatada == frase_contrario:
-    print('Essa frase é um palídromo')
+    print('Por isso é um palíndromo')
 else:
-    print('Essa frase não é um palídromo')
+    print('Por isso não é um palíndromo')
 print('*-*-' * 20)
 
 #exercicio 54
