@@ -15,7 +15,7 @@ for i in range(4):
     if sexo == 'M' and idade > mais_velho:
         mais_velho = idade
         nome_mais_velho = nome
-    if sexo == 'F' and idade > 20:
+    if sexo == 'F' and idade < 20:
         mulher_nova += 1
     
 
