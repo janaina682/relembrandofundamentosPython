@@ -29,32 +29,22 @@ print('Parabéns! Você acertou! O número era {}. Você precisou de {} tentativ
 print('*-*-' * 20)
 
 #exercicio 59
+from time import sleep
 print('Exercicio 59 - Calculadora')
 primeiro_numero = int(input('Digite o primeiro número: '))
 segundo_numero = int(input('Digite o segundo número: '))
-escolha_menu = int(input('''Escolha a operação que deseja realizar:
+escolha_menu = 0
+while escolha_menu !=5:
+    escolha_menu = int(input('''Escolha a operação que deseja realizar:
 [1] - Soma
 [2] - Multiplicar
 [3] - maior
 [4] - Novos números
 [5] - Sair do programa '''))
-while escolha_menu !=5:
     if escolha_menu == 1:
-        print('A soma entre {} e {} é igual a {}'.format(primeiro_numero, segundo_numero, primeiro_numero + segundo_numero))
-        escolha_menu = int(input('''Escolha a operação que deseja realizar:
-        [1] - Soma
-        [2] - Multiplicar
-        [3] - maior
-        [4] - Novos números
-        [5] - Sair do programa '''))
+        print('A soma entre {} + {} é igual a {}'.format(primeiro_numero, segundo_numero, primeiro_numero + segundo_numero))
     elif escolha_menu == 2:
-        print('A multiplicação entre {} e {} é igual a {}'.format(primeiro_numero, segundo_numero, primeiro_numero * segundo_numero))
-        escolha_menu = int(input('''Escolha a operação que deseja realizar:
-        [1] - Soma
-        [2] - Multiplicar
-        [3] - maior
-        [4] - Novos números
-        [5] - Sair do programa '''))
+        print('O resultado de {} x {} é igual a {}'.format(primeiro_numero, segundo_numero, primeiro_numero * segundo_numero))
     elif escolha_menu == 3:
         if primeiro_numero > segundo_numero:
             print('O primeiro número [{}] é maior que o segundo número [{}]'.format(primeiro_numero, segundo_numero))
@@ -62,23 +52,15 @@ while escolha_menu !=5:
             print('O segundo número [{}] é maior que o primeiro número [{}]'.format(segundo_numero, primeiro_numero))
         else:
             print('Os dois números são iguais! [{}]'.format(primeiro_numero))
-        escolha_menu = int(input('''Escolha a operação que deseja realizar:
-        [1] - Soma
-        [2] - Multiplicar
-        [3] - maior
-        [4] - Novos números
-        [5] - Sair do programa '''))
     elif escolha_menu == 4:
+        print('Digite os números novamente')
         primeiro_numero = int(input('Digite o primeiro número: '))
         segundo_numero = int(input('Digite o segundo número: '))
-        escolha_menu = int(input('''Escolha a operação que deseja realizar:
-        [1] - Soma
-        [2] - Multiplicar
-        [3] - maior
-        [4] - Novos números
-        [5] - Sair do programa '''))
+    elif escolha_menu == 5:
+        print('Saindo do programa...')
     else:
         print('Opção inválida! Tente novamente.')
+    sleep(2)
 print('*-*-' * 20)
 
 #exercicio 60
