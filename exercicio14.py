@@ -1,3 +1,4 @@
+'''
 #exercicio 61
 print('Exercício 61 - Progressão Aritmética')
 primeiro_termo = int(input('Digite o primeiro termo da PA: '))
@@ -23,4 +24,30 @@ while mais_termos !=0:
         print('{} ->'.format(termo), end = '')
         termo += razao
     mais_termos = int(input('\nQuantos termos você quer mostrar a mais? digite [0] para sair: '))
+print('\n' + '*-*-' * 20) 
+
+#exercicio 63
+print('Exercicio 63 - Sequência de Fibonacci')
+numero = int(input('Digite um número para mostrar a sequência de Fibonacci: '))
+qtde_termos = int(input('Digite a quantidade de termos que deseja mostrar: '))
+prox_termo = numero
+resultado = 0
+total_termos = 0
+while total_termos < qtde_termos:
+    print('{} ->'.format(numero), end= ' ')
+    resultado = numero + prox_termo
+    numero = prox_termo
+    prox_termo = resultado
+    total_termos += 1
 print('\n' + '*-*-' * 20)
+'''
+#exercicio 64
+print('Exercicio 64 - lendo números')
+soma = 0
+qtde_numeros = 0
+numero = int(input('Digite um número inteiro ou [999] para sair: '))
+while numero != 999:
+    soma += numero
+    qtde_numeros += 1
+    numero = int(input('Digite um número inteiro ou [999] para sair: '))
+print('A soma dos {} numeros digitados é: {}'.format(qtde_numeros, soma))
