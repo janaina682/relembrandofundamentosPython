@@ -13,23 +13,26 @@ print('Exercício 62 - Progressão Aritmética v2.0')
 termo = int(input('Digite o primeiro termo da PA: '))
 razao =int(input('Digite a razão da PA: '))
 ultimo_termo = termo + 9 * razao
+qtde_termos = 10
 while termo <= ultimo_termo:
     print('{} ->'.format(termo), end= ' ')
     termo += razao
 mais_termos = int(input('\nQuantos termos você quer mostrar a mais? '))
+qtde_termos += mais_termos
 while mais_termos !=0:
     ultimo_termo += mais_termos * razao
     while termo <= ultimo_termo:
         print('{} ->'.format(termo), end = '')
         termo += razao
     mais_termos = int(input('\nQuantos termos você quer mostrar a mais? digite [0] para sair: '))
+print('Foram mostrados {} termos'.format(qtde_termos))
 print('\n' + '*-*-' * 20) 
 
 #exercicio 63
 print('Exercicio 63 - Sequência de Fibonacci')
-numero = int(input('Digite um número para mostrar a sequência de Fibonacci: '))
+numero = 0
 qtde_termos = int(input('Digite a quantidade de termos que deseja mostrar: '))
-prox_termo = numero
+prox_termo = 1
 resultado = 0
 total_termos = 0
 while total_termos < qtde_termos:
