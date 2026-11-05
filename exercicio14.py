@@ -1,4 +1,3 @@
-'''
 #exercicio 61
 print('Exercício 61 - Progressão Aritmética')
 primeiro_termo = int(input('Digite o primeiro termo da PA: '))
@@ -40,7 +39,7 @@ while total_termos < qtde_termos:
     prox_termo = resultado
     total_termos += 1
 print('\n' + '*-*-' * 20)
-'''
+
 #exercicio 64
 print('Exercicio 64 - lendo números')
 soma = 0
@@ -51,3 +50,36 @@ while numero != 999:
     qtde_numeros += 1
     numero = int(input('Digite um número inteiro ou [999] para sair: '))
 print('A soma dos {} numeros digitados é: {}'.format(qtde_numeros, soma))
+
+#exercicio 65
+print('Exercicio 65 - Média, maior e menor')
+soma = 0
+qtde_numeros = 0
+numero = int(input('Digite um número inteiro: '))
+maior = numero
+menor = numero
+validacao = True
+while validacao == True:
+    soma += numero
+    qtde_numeros += 1
+    if numero > maior:
+        maior = numero
+    if numero < menor:
+        menor = numero
+    validacao = input('Deseja continuar? [S/N]: ').strip().upper()
+    if validacao == 'N':
+        validacao = False
+    elif validacao != 'S':
+        validacao = input('Opção inválida! Digite [S] para continuar ou [N] para sair.')
+        if validacao == 'N':
+            validacao = False
+        else:
+            validacao = True
+            numero = int(input('Digite um número inteiro ou [0] para sair: '))
+    else:
+        numero = int(input('Digite um número inteiro ou [0] para sair: '))
+        validacao = True
+media = soma / qtde_numeros
+print('Foram digitados {} números, a média entre eles é: {:.2f}'.format(qtde_numeros, media))
+print('O maior número digitado foi: {}'.format(maior))
+print('O menor número digitado foi: {}'.format(menor))
