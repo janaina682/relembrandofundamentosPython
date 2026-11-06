@@ -1,4 +1,4 @@
-#exercicio 66
+'''#exercicio 66
 print('Exercicio 66 - Soma dos números digitados')
 soma = qtde_numeros = 0
 while True:
@@ -64,5 +64,40 @@ while True:
             break
 print('GAME OVER! Você venceu {} vezes'.format(vitorias)) 
         
+'''
+#exercicio 69
+print('Exercicio 69 - Estatísticas de idade e sexo')
+pessoas_mais18 = homens = mulheres_menos20 = 0
+sexo = ''
+while True:
+    print('--' * 21)
+    print('-'*10 + ' CADASTRE UMA PESSOA ' + '-'*10)
+    print('--' * 21)
+    idade = int(input('Digite a idade da pessoa: '))
+    while True:
+        sexo = str(input('Digite o sexo da pessoa [M/F]: ').strip().upper()[0])
+        if sexo in 'MF':
+            break
+        print('Opção inválida! Digite apenas [M] para masculino ou [F] para feminino.')
+    if idade >= 18:
+        pessoas_mais18 += 1
+    if sexo == 'M':
+        homens += 1
+    if sexo == 'F' and idade < 20:
+        mulheres_menos20 += 1
+    while True:
+        continuar = str(input('Deseja continuar cadastrando pessoas? [S/N]: ')).strip().upper()[0]
+        if continuar in 'SN':
+            break
+        print('Opção inválida! Digite apenas [S] para sim ou [N] para não.')
+    if continuar == 'N':
+        break
 
+print(f'Total de pessoas com mais de 18 anos: {pessoas_mais18}')
+print(f'Total de homens cadastrados: {homens}')
+print(f'Total de mulheres com menos de 20 anos: {mulheres_menos20}')
+    
+ 
+    
+    
 
