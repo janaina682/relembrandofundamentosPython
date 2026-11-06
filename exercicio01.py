@@ -14,11 +14,11 @@ print('-' * 20)
 print('Exercício 03 - Operações Aritméticas')
 n1 = int(input('Digite o primeiro numero: '))
 n2 = int(input('Digite o segundo numero: '))
-print('A soma de {} e {} é {}'.format(n1, n2, n1+n2))
-print('A subitração de {} e {} é {}'.format(n1, n2, n1-n2))
-print('A multipricação de {} por {} é {}'.format(n1, n2, n1*n2))
-print('A divisã de {} por {} é {}'.format(n1, n2, n1/n2))
-print('{} elevado a {} é {}'.format(n1, n2, n1**n2))
+print(f'A soma de {n1} e {n2} é {n1+n2}')
+print(f'A subitração de {n1} e {n2} é {n1-n2}')
+print(f'A multipricação de {n1} por {n2} é {n1*n2}')
+print(f'A divisã de {n1} por {n2} é {n1/n2}')
+print(f'{n1} elevado a {n2} é {n1 ** n2}')
 print('-' * 20)
 
 
@@ -38,13 +38,13 @@ print('-' * 20)
 #exercicio 05
 print('Exercício 05 - Antecessor e Sucessor')
 numero = int(input('Digite um número: '))
-print('O número digitado foi {}, seu antecessor é {} e seu sucessor é {}'.format(numero, (numero-1), numero+1))
+print(f'O número digitado foi {numero}, seu antecessor é {numero - 1 } e seu sucessor é {numero + 1}')
 print('-' * 20)
 
 #exercicio 06
 print('Exercício 06 - Dobro, Triplo e Raiz Quadrada')
-print('Você digitou o número {}'.format(numero))
-print('O dobro é {}, o triplo é {} e a raiz quadrada é {}'.format(numero*2, numero*3, numero**(1/2)))
+print(f'Você digitou o número {numero}')
+print(f'O dobro é {numero * 2}, o triplo é {numero * 3} e a raiz quadrada é {numero ** (1/2)}')
 print('-' * 20)
 
 #exercicio 07
