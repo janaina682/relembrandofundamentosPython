@@ -58,29 +58,23 @@ print('A soma dos {} numeros digitados é: {}'.format(qtde_numeros, soma))
 print('Exercicio 65 - Média, maior e menor')
 soma = 0
 qtde_numeros = 0
-numero = int(input('Digite um número inteiro: '))
-maior = numero
-menor = numero
+maior = menor = 0
 validacao = True
 while validacao == True:
+    numero = int(input('Digite um número inteiro: '))
     soma += numero
     qtde_numeros += 1
     if numero > maior:
         maior = numero
-    if numero < menor:
-        menor = numero
-    validacao = input('Deseja continuar? [S/N]: ').strip().upper()
-    if validacao == 'N':
-        validacao = False
-    elif validacao != 'S':
-        validacao = input('Opção inválida! Digite [S] para continuar ou [N] para sair.')
-        if validacao == 'N':
-            validacao = False
-        else:
-            validacao = True
-            numero = int(input('Digite um número inteiro ou [0] para sair: '))
     else:
-        numero = int(input('Digite um número inteiro ou [0] para sair: '))
+        menor = numero
+    continuar = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
+    if continuar == 'N':
+        validacao = False
+    elif continuar not in 'SN':
+        print('Opção inválida, tente novamente!')
+        continuar = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
+    else:
         validacao = True
 media = soma / qtde_numeros
 print('Foram digitados {} números, a média entre eles é: {:.2f}'.format(qtde_numeros, media))
