@@ -25,16 +25,16 @@ for numero in range(0, 501, 3):
     if numero % 2 != 0:
         soma += numero
         count += 1
-print('A soma de todos os {} valores é {}'.format(count, soma))
+print(f'A soma de todos os {count} valores é {soma}')
 print('*/*' * 20)
 
 #exercicio 49
 print('Exercicio 49 - Tabuada')
 numero = int(input('Digite um número para gerar a tabuada dele: '))
-print('A tabuada de {} é:'.format(numero))
+print(f'A tabuada de {numero} é:')
 
 for n in range(0, 11):
-    print('{} x {} = {}'.format(numero, n, numero * n))
+    print(f'{numero} x {n} = {numero * n}')
 print('*/*' * 20)
 
 #exercicio 50
@@ -46,4 +46,4 @@ for n in range(0,6):
     if n % 2 == 0:
         soma = soma + n
         count += 1
-print('Você informou {} numeros PARES e a soma foi: {} '.format(count,soma))
+print(f'Você informou {count} numeros PARES e a soma foi: {soma} ')

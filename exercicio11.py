@@ -5,7 +5,7 @@ termo1 = int(input('Digite o primeiro termo da P.A.: '))
 razao = int(input('Digite a razão da P.A: '))
 decimo = termo1 + (10 - 1) * razao
 for n in range(termo1, decimo + razao, razao):
-    print('{}'.format(n), end=' -> ')
+    print(f'{n}', end=' -> ')
 print('\n')
 print('*-*-' * 20)
 
@@ -27,9 +27,9 @@ else:
         else:
             primo = True
 if primo == True:
-    print('O número {} é primo'.format(numero))
+    print(f'O número {numero} é primo')
 else:
-    print('O número {} não é primo'.format(numero))
+    print(f'O número {numero} não é primo')
 print('*-*-' * 20)
 
 #exercicio 52 - Correção (feito de outra forma)
@@ -41,8 +41,8 @@ for c in range(1, num + 1):
         tot += 1
     else:
         print('\033[31m', end='')
-    print('{} '.format(c), end='')
-print('\n\033[mO número {} foi divisível {} vezes'.format(num, tot))
+    print(f'{c} ', end='')
+print(f'\n\033[mO número {num} foi divisível {tot} vezes')
 if tot == 2:
     print('É por isso que ele é PRIMO!')
 else:
@@ -53,7 +53,7 @@ print('Exercicio 53 - Verificar se a frase é um palíndromo')
 frase = str(input('Escreva uma frase: '))
 frase_formatada = frase.upper().replace(' ', '')
 frase_contrario = frase_formatada[::-1]
-print('A frase: {} escrita ao contrário é: {}'.format(frase_formatada, frase_contrario))
+print(f'A frase: {frase_formatada} escrita ao contrário é: {frase_contrario}')
 
 if frase_formatada == frase_contrario:
     print('Por isso é um palíndromo')
@@ -67,20 +67,20 @@ ano_atual = date.today().year
 ano = []
 total = 0
 for n in range(0,7):
-    ano.append(int(input('Digite o ano de nascimeto do {}° participante '.format(n+1))))
+    ano.append(int(input(f'Digite o ano de nascimeto do {n+1}° participante ')))
 for a in ano:
     if (ano_atual - a) < 18:
         total += 1
-print('Esses são os anos de nascimento dos participantes: {}'.format(ano))
-print('{} não atingiram a maioridade ainda'.format(total))
-print('{} são maiores de idade'.format(len(ano) - total))
+print(f'Esses são os anos de nascimento dos participantes: {ano}')
+print(f'{total} não atingiram a maioridade ainda')
+print(f'{len(ano) - total} são maiores de idade')
 print('*-*-' * 20)
 
 #exercicio 55
 print('Exercício 55 - Maior e menor peso')
 pesos = []
 for i in range(5):
-    pesos.append(float(input('Digite o peso do {}° participante: '.format(i+1))))
+    pesos.append(float(input(f'Digite o peso do {i+1}° participante: ')))
 maior = pesos[0]
 menor = pesos[0]
 for peso in pesos:
@@ -88,5 +88,5 @@ for peso in pesos:
         maior = peso
     if peso < menor:
         menor = peso
-print('O maior peso entre os participante é: {}kg'.format(maior))
-print('O menor peso entre os participante é: {}kg'.format(menor))
+print(f'O maior peso entre os participante é: {maior}kg')
+print(f'O menor peso entre os participante é: {menor}kg')

@@ -21,11 +21,11 @@ palpite = int(input('Tente adivinhar o número que estou pensando entre 0 e 10: 
 while palpite != numero_aleatorio:
     tentativas += 1
     if palpite < numero_aleatorio:
-        print('Você errou! O número que estou pensando é maior que {}. Tente novamente.'.format(palpite))
+        print(f'Você errou! O número que estou pensando é maior que {palpite}. Tente novamente.')
     elif palpite > numero_aleatorio:
-        print('Você errou! O número que estou pensando é menor que {}. Tente novamente.'.format(palpite))
+        print(f'Você errou! O número que estou pensando é menor que {palpite}. Tente novamente.')
     palpite = int(input('Digite outro número entre 0 e 10: '))
-print('Parabéns! Você acertou! O número era {}. Você precisou de {} tentativas para acertar'.format(numero_aleatorio, tentativas + 1))
+print(f'Parabéns! Você acertou! O número era {numero_aleatorio}. Você precisou de {tentativas + 1} tentativas para acertar')
 print('*-*-' * 20)
 
 #exercicio 59
@@ -42,16 +42,16 @@ while escolha_menu !=5:
 [4] - Novos números
 [5] - Sair do programa '''))
     if escolha_menu == 1:
-        print('A soma entre {} + {} é igual a {}'.format(primeiro_numero, segundo_numero, primeiro_numero + segundo_numero))
+        print(f'A soma entre {primeiro_numero} + {segundo_numero} é igual a {primeiro_numero + segundo_numero}')
     elif escolha_menu == 2:
-        print('O resultado de {} x {} é igual a {}'.format(primeiro_numero, segundo_numero, primeiro_numero * segundo_numero))
+        print(f'O resultado de {primeiro_numero} x {segundo_numero} é igual a {primeiro_numero * segundo_numero}')
     elif escolha_menu == 3:
         if primeiro_numero > segundo_numero:
-            print('O primeiro número [{}] é maior que o segundo número [{}]'.format(primeiro_numero, segundo_numero))
+            print(f'O primeiro número [{primeiro_numero}] é maior que o segundo número [{segundo_numero}]')
         elif primeiro_numero < segundo_numero:
-            print('O segundo número [{}] é maior que o primeiro número [{}]'.format(segundo_numero, primeiro_numero))
+            print(f'O segundo número [{segundo_numero}] é maior que o primeiro número [{primeiro_numero}]')
         else:
-            print('Os dois números são iguais! [{}]'.format(primeiro_numero))
+            print(f'Os dois números são iguais! [{primeiro_numero}]')
     elif escolha_menu == 4:
         print('Digite os números novamente')
         primeiro_numero = int(input('Digite o primeiro número: '))
@@ -66,11 +66,11 @@ print('*-*-' * 20)
 #exercicio 60
 print('Exercicio 60 - Fatorial')
 numero = int(input('Digite um número para calcular o fatorial: '))
-print('{}! = '.format(numero), end = '')
+print(f'{numero}! = ', end = '')
 total = 1
 while numero > 1:
-    print('{} x '.format(numero), end= '')
+    print(f'{numero} x ', end= '')
     total *= numero
     numero -= 1
-print('1 - O fatorial do número digitado é: {}'.format(total))
+print(f'1 - O fatorial do número digitado é: {total}')
     

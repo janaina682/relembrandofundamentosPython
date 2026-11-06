@@ -77,6 +77,6 @@ while validacao == True:
     else:
         validacao = True
 media = soma / qtde_numeros
-print('Foram digitados {} números, a média entre eles é: {:.2f}'.format(qtde_numeros, media))
-print('O maior número digitado foi: {}'.format(maior))
-print('O menor número digitado foi: {}'.format(menor))
+print(f'Foram digitados {qtde_numeros} números, a média entre eles é: {media:.2f}')
+print(f'O maior número digitado foi: {maior}')
+print(f'O menor número digitado foi: {menor}')

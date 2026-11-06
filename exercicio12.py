@@ -6,10 +6,10 @@ mais_velho = 0
 nome_mais_velho = ''
 mulher_nova = 0
 for i in range(4):
-    print('##### Cadastro da {}° pessoa #####'.format(i+1))
+    print(f'##### Cadastro da {i+1}° pessoa #####')
     nome = input('Digite o nome: ')
     idade = int(input('Digite a idade: '))
-    sexo = input('Digite "F" para feminino ou "M" para masculino: ').upper()
+    sexo = input(f'Digite "F" para feminino ou "M" para masculino: ').upper()
     idades += idade
     media = idades /4
     if sexo == 'M' and idade > mais_velho:
@@ -19,9 +19,9 @@ for i in range(4):
         mulher_nova += 1
     
 
-print('A média de idade do grupo é: {}'.format(media))
-print('O homem mais velho é o {}, com {} anos'.format(nome_mais_velho,mais_velho))
-print('Tem {} mulheres com menos de 20 anos'.format(mulher_nova))
+print(f'A média de idade do grupo é: {media}')
+print(f'O homem mais velho é o {nome_mais_velho}, com {mais_velho} anos')
+print(f'Tem {mulher_nova} mulheres com menos de 20 anos')
 
 
     

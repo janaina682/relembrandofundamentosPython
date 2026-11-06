@@ -5,10 +5,11 @@ ano = int(input('Que ano você quer analisar? Digite 0 para analisar o ano atual
 if ano == 0:
     ano = date.today().year
 if ano % 4 == 0 and ano %100 != 0 or ano % 400 == 0:
-    print('O ano {} É BISSEXTO'.format(ano))
+    print(f'O ano {ano} É BISSEXTO')
 else:
-    print('O ano {} NÃO É BISSEXTO'.format(ano))
-    
+    print(f'O ano {ano} NÃO É BISSEXTO')
+print('-+' * 20)
+
 #exercicio 33
 n1 = float(input('Digite o primeiro número: '))
 n2 = float(input('Digite o segundo número: '))
@@ -23,8 +24,8 @@ if n2 > maior:
     maior = n2
 if n3 > maior:
     maior = n3
-print('O menor número é {}'.format(menor))
-print('O maior número é {}'.format(maior))
+print(f'O menor número é {menor}')
+print(f'O maior número é {maior}')
 print('-+' * 20)
 
 #exercicio 34
@@ -34,7 +35,7 @@ if salario > 1250:
     aumento = salario * 0.10
 else:
     aumento = salario * 0.15
-print('O salário com aumento é de R${:.2f}'.format(salario + aumento))
+print(f'O salário com aumento é de R$ {salario + aumento:.2f}')
 print('-+' * 20)
 
 #exercicio 35

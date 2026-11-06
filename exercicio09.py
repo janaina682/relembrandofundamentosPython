@@ -7,15 +7,15 @@ ano_nascimento = int(input('Digite o ano de nascimento do atleta: '))
 idade = ano_atual - ano_nascimento
 
 if idade <= 9:
-    print('O atleta tem {} anos, e está na categoria MIRIM'.format(idade))
+    print(f'O atleta tem {idade} anos, e está na categoria MIRIM')
 elif idade <= 14:
-    print('O atleta tem {} anos, e está na categoria INFANTIL'.format(idade))
+    print(f'O atleta tem {idade} anos, e está na categoria INFANTIL')
 elif idade <= 19:
-    print('O atleta tem {} anos, e está na categoria JUNIOR'.format(idade))
+    print(f'O atleta tem {idade} anos, e está na categoria JUNIOR')
 elif idade <= 25: 
-    print('O atleta tem {} anos, e está na categoria SENIOR'.format(idade))
+    print(f'O atleta tem {idade} anos, e está na categoria SENIOR')
 else:
-    print('O atleta tem {} anos, e está na categoria MASTER'.format(idade))
+    print(f'O atleta tem {idade} anos, e está na categoria MASTER')
 print('-+*' *20)
 
 #exercicio 42
@@ -43,15 +43,15 @@ altura = float(input('Digite sua altura: '))
 imc = peso / (altura ** 2)
 
 if imc < 18.5:
-    print('Seu IMC é: {:.1f}, você está abaixo do peso ideal para sua altura'.format(imc))
+    print(f'Seu IMC é: {imc:.1f}, você está abaixo do peso ideal para sua altura')
 elif 18.5 <= imc < 25:
-    print('Seu IMC é: {:.1f}, você está na faixa de peso ideal para sua altura'.format(imc))
+    print(f'Seu IMC é: {imc:.1f}, você está na faixa de peso ideal para sua altura')
 elif 25 <= imc < 30:
-    print('Seu IMC é: {:.1f}, você está com sobrepeso'.format(imc))
+    print(f'Seu IMC é: {imc:.1f}, você está com sobrepeso')
 elif 30 <= imc < 40:
-    print('Seu IMC é: {:.1f}, você está com OBESIDADE, isto é acima do peso ideal para sua altura'.format(imc))
+    print(f'Seu IMC é: {imc:.1f}, você está com OBESIDADE, isto é acima do peso ideal para sua altura')
 else:
-    print('Seu IMC é: {:.1f}, você está com OBESIDADE MORBIDA, isto é MUITO acima do peso ideal para sua altura'.format(imc))
+    print(f'Seu IMC é: {imc:.1f}, você está com OBESIDADE MORBIDA, isto é MUITO acima do peso ideal para sua altura')
 print('-+*' *20)
 
 #exercicio 44
@@ -68,23 +68,23 @@ if condicao == 1:
     desconto = preco * 0.10
     preco_final = preco - desconto
     print('Pagamento à vista no dinheiro ou cheque tem 10% de desconto')
-    print('A compra de R${:.2f}, ganhou R${:.2f} de desconto e ficou por apenas R${:.2f}'.format(preco, desconto, preco_final))
+    print(f'A compra de R${preco:.2f}, ganhou R${desconto:.2f} de desconto e ficou por apenas R${preco_final:.2f}')
 elif condicao == 2:
     desconto = preco * 0.05
     preco_final = preco - desconto
     print('Pagamento à vista no cartão tem 5% de desconto')
-    print('A compra de R${:.2f}, ganhou R${:.2f} de desconto e ficou por apenas R${:.2f}'.format(preco, desconto, preco_final))
+    print(f'A compra de R${preco:.2f}, ganhou R${desconto:.2f} de desconto e ficou por apenas R${preco_final:.2f}')
 elif condicao == 3:
     parcela = preco / 2
     print('Pagamento em até 2x no cartão NÃO TEM ACRESCIMO')
-    print('A compra ficou por apenas R${:.2f} 2x de R${:.2f}'.format(preco,parcela))
+    print(f'A compra ficou por apenas R${preco:.2f} 2x de R${parcela:.2f}')
 elif condicao == 4:
     juros = preco * 0.20
     preco_final = preco + juros
     print('Pagamento no cartão parcelado 3 ou mais vezes tem acrescimo de 20% de juros ')
     total_parcela = int(input('Você quer parcelar em quantas vezes? '))
     parcela = preco_final / total_parcela
-    print('Sua compra de R${:.2f}, foi parcelado no cartão em {}x de {:.2f}'.format(preco, total_parcela, parcela))
+    print(f'Sua compra de R${preco:.2f}, foi parcelado no cartão em {total_parcela}x de R${parcela:.2f}')
 else:
     print('O numero digitado não corresponde a nenhuma opção de pagamento')
 print('-+*' *20)
@@ -100,12 +100,12 @@ if computador == 2:
 if computador == 3:
     resposta_computador = 'TESOURA'
 print('=='*20)
-print('''Computador jogou {}
-Jogador jogou {}'''.format(resposta_computador, resposta_jogador))
+print(f'''Computador jogou {resposta_computador}
+Jogador jogou {resposta_jogador}''')
 print('=='*20)
 if resposta_computador == resposta_jogador:
-    print('Deu empate nós escolhemos {}'.format(resposta_computador))
+    print(f'Deu empate nós escolhemos {resposta_computador}')
 elif computador == 1 and resposta_jogador == 'PAPEL' or computador == 2 and resposta_jogador == 'TESOURA' or computador == 3 and resposta_jogador == 'PEDRA':
-    print('Você ganhou, escolheu {} e eu tinha escolhido {}'.format(resposta_jogador, resposta_computador))
+    print(f'Você ganhou, escolheu {resposta_jogador} e eu tinha escolhido {resposta_computador}')
 else:
-    print('Eu ganhei, eu escolhi {} e você escolheu {}'.format(resposta_computador, resposta_jogador))
+    print(f'Eu ganhei, eu escolhi {resposta_computador} e você escolheu {resposta_jogador}')
