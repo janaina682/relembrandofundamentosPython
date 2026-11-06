@@ -10,3 +10,16 @@ while True:
 print(f'A soma dos {qtde_numeros} valores digitados é: {soma}!') 
 print('*-*-' * 20)
 
+#exercicio 67
+print('Exercicio 67 - Tabuada')
+while True:
+    numero = int(input('Quer ver a tabuada de qual valor? '))
+    if numero < 0:
+        break
+    else:
+        print(f'A tabuada de {numero} é:')
+        for n in range(1, 11):
+            print(f'{numero} x {n} = {numero * n}')
+print('Programa encerrado! Volte sempre!')
+print('*-*-' * 20)
+
