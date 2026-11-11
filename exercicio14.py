@@ -47,7 +47,7 @@ print('\n' + '*-*-' * 20)
 print('Exercicio 64 - lendo números')
 soma = 0
 qtde_numeros = 0
-numero = int(input('Digite um número inteiro ou [999] para sair: '))
+numero = int(input('Digite um número inteiro: '))
 while numero != 999:
     soma += numero
     qtde_numeros += 1
@@ -58,15 +58,16 @@ print('A soma dos {} numeros digitados é: {}'.format(qtde_numeros, soma))
 print('Exercicio 65 - Média, maior e menor')
 soma = 0
 qtde_numeros = 0
-maior = menor = 0
+maior = 0
 validacao = True
 while validacao == True:
     numero = int(input('Digite um número inteiro: '))
+    menor = numero
     soma += numero
     qtde_numeros += 1
     if numero > maior:
         maior = numero
-    else:
+    if numero < menor:
         menor = numero
     continuar = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
     if continuar == 'N':
