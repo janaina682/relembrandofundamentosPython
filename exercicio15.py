@@ -1,4 +1,5 @@
-'''#exercicio 66
+'''
+#exercicio 66
 print('Exercicio 66 - Soma dos números digitados')
 soma = qtde_numeros = 0
 while True:
@@ -22,48 +23,53 @@ while True:
             print(f'{numero} x {n} = {numero * n}')
 print('Programa encerrado! Volte sempre!')
 print('*-*-' * 20)
-
+'''
 #exercicio 68
 print('Exercicio 68 - Jogo do Par ou Impar')
+from random import randint
+from time import sleep
 print('*' * 20)
 print('VAMOS JOGAR PAR OU IMPAR')
 print('*' * 20)
-opçao_jogador = opcao_computador = ''
-valor_jogador = valor_computador = 0
-vitorias = 0
-from random import randint
+vitoria = 0
+
 while True:
-    opcao_jogador = str(input('Escolha Par ou Impar [P/I]: ')).strip().upper()[0]
+    opcao_jogador = ' '
+    valor_pc = randint(0, 10)
+    valor_jogador = int(input('Digite um número enquanto penso no meu... '))
+    sleep(1)
+    print('Ok, já pensei no meu...')
+    total = valor_jogador + valor_pc
+    while opcao_jogador not in 'PI':
+        opcao_jogador = input('Você prefere PAR [P] OU IMPAR [I]? ').strip().upper()
     if opcao_jogador == 'P':
-        opcao_computador = 'I'
-        print('Você escolheu PAR então eu fico com IMPAR!')
-    elif opcao_jogador == 'I':
-        opcao_computador = 'P'
-        print('Você escolheu IMPAR então eu fico com PAR!')
-    else:
-        print('Opção inválida! Tente novamente.')
-    valor_jogador = int(input('Digite seu valor: '))
-    valor_computador = randint(0, 10)
-    print(f'Eu escolhi o valor {valor_computador}')
-    soma = valor_jogador + valor_computador
-    if soma % 2 == 0:
-        print(f'A soma dos valores é {soma} que é PAR')
-        if opcao_jogador == 'P':
-            print('Você venceu!')
-            vitorias += 1
+        print('Já que escolheu PAR então eu fico com ÍMPAR')
+        sleep(1)
+        print(f'Você jogou o número {valor_jogador} e eu o número {valor_pc} dando um total de {total}')
+        if total % 2 == 0:
+            print('Que é PAR!!! PARABÉNS, VOCÊ GANHOU!!!')
+            sleep(1)
+            print('Vamos jogar mais uma vez')
+            vitoria += 1
         else:
-            print('Eu venci!')
+            print('Que é ÍMPAR!!! você perdeu, mas sorte na proxima')
+            print(f'Quantidade de vitorias nessa partida: {vitoria}')
             break
-    else:
-        print(f'A soma dos valores é {soma} que é IMPAR')
-        if opcao_jogador == 'I':
-            print('Você venceu!')
-            vitorias += 1
+    if opcao_jogador == 'I':
+        print('Já que você escolheu IMPAR então eu fico com PAR')
+        print(f'Você jogou o número {valor_jogador} e eu o número {valor_pc} dando um total de {total}')
+        if total % 2 == 0:
+            print('Que é PAR!!! você perdeu, mas sorte na proxima')
+            print(f'Quantidade de vitorias nessa partida: {vitoria}')
+            break
         else:
-            print('Eu venci!')
-            break
-print('GAME OVER! Você venceu {} vezes'.format(vitorias)) 
-        
+            print('Que é ÍMPAR!!! PARABÉNS, VOCÊ GANHOU!!!')
+            sleep(1)
+            print('Vamos jogar mais uma vez')
+            vitoria += 1
+                
+    
+  
 '''
 #exercicio 69
 print('Exercicio 69 - Estatísticas de idade e sexo')
@@ -97,7 +103,31 @@ print(f'Total de pessoas com mais de 18 anos: {pessoas_mais18}')
 print(f'Total de homens cadastrados: {homens}')
 print(f'Total de mulheres com menos de 20 anos: {mulheres_menos20}')
     
- 
+
+ #exercicio 70
+print('Exercicio 70 - Estatísticas de produtos')
+total = mais_q1000 = 0
+produto_mais_barato = ''
+menor_preco = 0
+print('--' *30)
+print('-'*5 + 'LOJA JANA STORE ' +'-' *5)
+print('--' *30)
+while True:
+    print('CADASTRO DE PRODUTO')
+    nome = str(input('Nome: '))
+    preço = float(input('Preço: '))
+    total += preço
+    if preço > 1000:
+        mais_q1000 += 1
+    if preço < menor_preco:
+        menor_preco = preço
+
+ '''
     
+    
+        
+        
+    
+
     
 
