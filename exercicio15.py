@@ -1,4 +1,3 @@
-'''
 #exercicio 66
 print('Exercicio 66 - Soma dos números digitados')
 soma = qtde_numeros = 0
@@ -23,7 +22,7 @@ while True:
             print(f'{numero} x {n} = {numero * n}')
 print('Programa encerrado! Volte sempre!')
 print('*-*-' * 20)
-'''
+
 #exercicio 68
 print('Exercicio 68 - Jogo do Par ou Impar')
 from random import randint
@@ -69,8 +68,8 @@ while True:
             vitoria += 1
                 
     
-  
-'''
+
+
 #exercicio 69
 print('Exercicio 69 - Estatísticas de idade e sexo')
 pessoas_mais18 = homens = mulheres_menos20 = 0
@@ -103,28 +102,35 @@ print(f'Total de pessoas com mais de 18 anos: {pessoas_mais18}')
 print(f'Total de homens cadastrados: {homens}')
 print(f'Total de mulheres com menos de 20 anos: {mulheres_menos20}')
     
-
  #exercicio 70
 print('Exercicio 70 - Estatísticas de produtos')
-total = mais_q1000 = 0
+itens = total = mais_q1000 = menor_preco = 0
 produto_mais_barato = ''
-menor_preco = 0
-print('--' *30)
-print('-'*5 + 'LOJA JANA STORE ' +'-' *5)
-print('--' *30)
+print('-' * 40)
+print('{:-^40}'.format(' JANA STORE '))
+print('-' * 40)
 while True:
     print('CADASTRO DE PRODUTO')
     nome = str(input('Nome: '))
     preço = float(input('Preço: '))
     total += preço
+    itens += 1
     if preço > 1000:
         mais_q1000 += 1
-    if preço < menor_preco:
+    if itens == 1 or preço < menor_preco:
         menor_preco = preço
-
- '''
-    
-    
+        produto_mais_barato = nome
+    while True:
+        continuar = str(input('Deseja continuar cadastrando? Digite [S] para SIM, [N] para NÃO: ')).upper().strip()[0]
+        if continuar in 'SN':
+            break
+        print('Opção invalida!')
+    if continuar == 'N':
+        break
+print('{:-^40}'.format(' FINAL DA COMPRA '))
+print(f'Você comprou {itens} itens e o valor total foi de R${total:.2f}')
+print(f'produto mais que mil = {mais_q1000}')
+print(f'O item mais barato foi o {produto_mais_barato} custando apenas R${menor_preco:.2f}')
         
         
     

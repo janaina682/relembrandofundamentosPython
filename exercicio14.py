@@ -56,18 +56,17 @@ print('A soma dos {} numeros digitados é: {}'.format(qtde_numeros, soma))
 
 #exercicio 65
 print('Exercicio 65 - Média, maior e menor')
-soma = 0
-qtde_numeros = 0
-maior = 0
+soma = qtde_numeros = maior = menor = 0
 validacao = True
 while validacao == True:
     numero = int(input('Digite um número inteiro: '))
-    menor = numero
     soma += numero
     qtde_numeros += 1
-    if numero > maior:
+    if qtde_numeros == 1:
+        menor = numero
+    elif numero > maior:
         maior = numero
-    if numero < menor:
+    else:
         menor = numero
     continuar = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
     if continuar == 'N':
