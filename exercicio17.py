@@ -1,3 +1,4 @@
+'''
 #exercicio 72
 print('Exercicio 72 - aprendendo Tuplas')
 numeros = ('Zero', 'Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Onze', 'Doze', 'Treze', 'Quatorze', 'Quinze', 'Desesseis', 'Dezessete', 'Dezoito', 'Dezenove', 'Vinte')
@@ -31,3 +32,20 @@ print('-'*20)
 chapeco = times.index('Chapecoence')+1
 print(f'O Chapecoense está na {chapeco}° posição')
 print('*-' * 20)
+'''
+#exercicio 74
+print('Exercicio 74 - números aleatórios e tuplas')
+import random
+numeros = (random.randint(0,10),random.randint(0,10),random.randint(0,10),random.randint(0,10), random.randint(0,10)) 
+print(f'Foram sorteados os números: {numeros} ')
+maior = menor = cont = 0
+for i in numeros:
+    if i > maior:
+        maior = i
+    if cont == 0:
+        menor = i 
+    cont += 1
+    if i < menor:
+        menor = i
+print(f'O maior número sorteado foi: {maior}')
+print(f'O menor número sorteado foi: {menor}')
