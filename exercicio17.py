@@ -32,7 +32,6 @@ print('-'*20)
 chapeco = times.index('Chapecoence')+1
 print(f'O Chapecoense está na {chapeco}° posição')
 print('*-' * 20)
-'''
 #exercicio 74
 print('Exercicio 74 - números aleatórios e tuplas')
 import random
@@ -49,3 +48,21 @@ for i in numeros:
         menor = i
 print(f'O maior número sorteado foi: {maior}')
 print(f'O menor número sorteado foi: {menor}')
+print('*-' * 20)
+#exercicio 75
+print('Exercicio 75 - input de dados armazenados numa tupla')
+valores = int(input('Digite um número: ')),int(input('Digite um número: ')),int(input('Digite um número: ')),int(input('Digite um número: '))
+print(f'Você digitou os valores: {valores}')
+print(f'O número 9 apareceu: {valores.count(9)} vezes')
+for posicao, i in enumerate(valores):
+    if i == 3:
+            print(f'O número 3 foi digitado na posição: {posicao +1}')
+if valores.count(3) == 0:
+    print('Não foi digitado nenhum número "3"')
+print('Os valores pares digitados foram: '.format(),end=' ')
+for v in valores:
+        if v % 2 == 0:
+            print('{}'.format(v), end = ' ')
+print('*-' * 20)
+'''
+
