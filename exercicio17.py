@@ -10,3 +10,24 @@ while True:
 print(f'Você digitou o número {numeros[num]}')
 print('*-' * 20)
 
+#exercicio 73
+print('Exercicio 73 - Usando Tuplas')
+times = ('Flamengo', 'Palmeiras', 'Cruzeiro', 'Fluminense', 'Athletico-PR', 'Bahia', 'Atlético-MG', 'Santos', 'Bragantino', 'São Paulo', 'Vasco da Gama', 'Botafogo', 'Coritiba', 'Mirassol', 'Corinthians', 'EC Vitória', 'Internacional', 'Grêmio', 'Remo', 'Chapecoence')
+print(times)
+print('-'*20)
+print('Os primeiros 5 colocados na tabela são:')
+for a in range(5):
+    print(f'{a+1}° Colocado: {times[a]}')
+print('-'*20)
+print('Os quatro útimos na tabela são: ')
+for b in range(19, 15, -1):
+    print(f'{b+1}° Colocado {times[b]}')
+print('-'*20)
+print('A lista dos times em ordem alfabética')
+times_ordem = sorted(times)
+for c in times_ordem:
+    print(c)
+print('-'*20)
+chapeco = times.index('Chapecoence')+1
+print(f'O Chapecoense está na {chapeco}° posição')
+print('*-' * 20)
