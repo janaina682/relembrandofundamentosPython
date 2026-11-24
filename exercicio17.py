@@ -64,7 +64,7 @@ for v in valores:
         if v % 2 == 0:
             print('{}'.format(v), end = ' ')
 print('*-' * 20)
-'''
+
 #Exercicio 76
 print('Exercicio 76 - tupla de produtos')
 listagem = ('Lápis', 1.75, 'Borracha', 2.00, 'Caderno', 15.90, 'Estojo', 25.00, 'Transferidor', 4.20, 'Compasso', 9.99, 'Mochila', 120.32, 'Canetas', 22.30, 'Livro', 34.90)
@@ -76,3 +76,13 @@ for posicao in range(0, len(listagem)):
         print(f'{listagem[posicao]:.<30}',end='')
     else:
         print(f'R$: {listagem[posicao]:.2f}')
+'''
+#exercicio 77
+print('Exercicio 77 - Destrinchanto tuplas')
+palavras = ('aprender', 'programar', 'linguagem', 'pyhton', 'curso', 'gratis', 'estudar', 'praticar', 'trabalhar', 'mercado', 'programador', 'futuro')
+for palavra in palavras:
+    print(f'Na palavra {palavra.upper()} temos: ',end='')
+    for letra in palavra:
+        if letra in 'aeiou':
+            print(f'{letra} ',end='')
+    print('\n')
