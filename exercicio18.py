@@ -1,4 +1,4 @@
-'''
+
 #exercicio 78
 print('Exercicio 78 - Usando listas')
 lista = []
@@ -32,7 +32,7 @@ print(f'Você digitou os valores: {numeros}')
 numeros.sort()
 print(f'Eles em ordem númerica ficam: {numeros}')
 
-'''
+
 #exercicio 80
 print('Exercicio 80 - Inserindo números na lista')
 valores = []
